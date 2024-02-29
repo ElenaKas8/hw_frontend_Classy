@@ -7,7 +7,7 @@
     --paragraph-color: #BDBDBD;
     --hero-bgcolor: #E5E5E5;
     --card-color: #EBEBEB;
-
+     --white-color:#fff;
 
 }
 
@@ -19,7 +19,12 @@
     text-decoration: none;
     outline: none;
 }
+body{
+    font-family: Lato;
+}
 h1,h2{
+    font-family: "Marriweather";
+    font-weight: 900px;
     font-weight: 900px;
     font-size: 48px;
     color: var(--bigtitle-color);
@@ -27,9 +32,11 @@ h1,h2{
 }
 img{
     cursor: pointer;
+    width: 100%;
+    height: 100%;
 }
 a{
-    color:var(--title-color);
+   color: inherit; 
 }
 
 p{
@@ -38,6 +45,10 @@ p{
     padding-bottom: 40px;
 
 }
+.burger{
+    display: none;
+}
+
 .paragraph_text{
     min-width: 445px;
     height:245px;   
@@ -53,33 +64,33 @@ span{
     margin: 0 auto;
     padding: 140px 200px;
     
+    
 }
-
-
 
 .hero{
     background-color: #E5E5E5;
+    width: 1512px;
+    
 }
 .wrapper{   
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    justify-content: center;
-    
+    justify-content: center;   
 }
     
 .work img{
     width: 350px;
     height: 360px;
-
 }
+
+
 
 .container-header{
     align-items: center;
     background-color: #fff;
     color:#222222;
     padding: 25px 200px;
-    border-bottom: 2px solid  #005FA3;
     display: flex;
     justify-content: space-between;
 }
@@ -135,6 +146,7 @@ cursor: pointer;
     padding: 10px 20px;
     cursor: pointer;
     transition:  0.2s ease-in-out;
+    color: var(--title-color);
     
 }
 .contakty a:hover{
@@ -172,13 +184,21 @@ cursor: pointer;
     width: 225px;
     height: 225px;
     background-color: var(--card-color);
-    display: flex;
+    display: grid;
     align-items: center;
    justify-content: center;
+   transition:all background-color 0.5s ease;
+  
+}
+.details:hover{
+    background-color: var(--accent-color);
+    cursor: pointer;
+    
 }
 
 .details_inner{
     padding-bottom: 23px;
+   
 }
 .details_inner>a{
     width: 173px;
@@ -198,10 +218,16 @@ cursor: pointer;
 }
 
 num{
-    font-size: 48px;
-    font-weight: 900px;
+    font-size: 55px;
+    font-weight: 900;
     color:var(--num-color);
-}
+    font-family: Lato;
+line-height: 66px;
+letter-spacing: 0.1em;
+
+};
+
+
 .details_inner>p{  
     max-width: 107px;
     font-size: 14px;
@@ -209,4 +235,65 @@ num{
     line-height: 1.8;
     color: var(--num-color);
 
+}
+
+
+.wrapper_work{
+    color: #fff;
+    width: 350px;
+    height: 360px;
+    display:grid;
+    padding: 40px 121px 40px 45px;
+    justify-items: center;
+    background-image: url('./images/ourwork2.png');
+    background-position: center center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: space-between;
+
+}
+.work {
+    margin-top: auto; }
+
+.button {
+    color: var(--white-color);
+    border-color: var(--white-color);
+    
+}
+.button a{
+    display: flex;
+    width: 173px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border:var(--white-color) solid 2px;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition:  0.2s ease-in-out;
+    
+}
+
+.wrapper_work:hover{
+    background-image: url('./images/ourwork1.png');
+    background-position: center center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: space-between;
+    transition:  0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.fa-solid{
+    color: var(--num-color);
+    width: 72px;
+    height: 72px;
+
+}
+
+.linkText {
+    color: inherit;
+    font-size: inherit; /* Добавьте наследование размера шрифта */
+    font-weight: inherit; /* Добавьте наследование настройки жирного шрифта */
+    /* Другие свойства, если необходимо */
 }
